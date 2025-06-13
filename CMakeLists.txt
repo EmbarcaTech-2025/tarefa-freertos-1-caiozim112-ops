@@ -20,7 +20,8 @@ cmake_minimum_required(VERSION 3.12)
 if (DEFINED ENV{FREERTOS_PATH})
   SET(FREERTOS_PATH $ENV{FREERTOS_PATH})
 else()
-  SET(FREERTOS_PATH ${CMAKE_CURRENT_LIST_DIR}/FreeRTOS-Kernel)
+#   SET(FREERTOS_PATH ${CMAKE_CURRENT_LIST_DIR}/FreeRTOS_Kernel_import.cmake)
+  SET(FREERTOS_PATH ${CMAKE_CURRENT_LIST_DIR}/FreeRTOS)
 endif()
 
 message("FreeRTOS Kernel located in ${FREERTOS_PATH}")
@@ -43,7 +44,8 @@ target_include_directories(embarcatech-freertos-tarefa-1 PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}
     ${CMAKE_CURRENT_LIST_DIR}/include
 )
-
+pico_enable_stdio_uart(embarcatech-freertos-tarefa-1 0)
+pico_enable_stdio_usb(embarcatech-freertos-tarefa-1 1)
 target_link_libraries(embarcatech-freertos-tarefa-1 
     pico_stdlib 
     FreeRTOS-Kernel-Heap4 

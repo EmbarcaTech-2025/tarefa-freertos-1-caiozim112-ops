@@ -1,17 +1,22 @@
 
 # Tarefa: Roteiro de FreeRTOS #1 - EmbarcaTech 2025
 
-Autor: **Insira Seu Nome**
+Autor: **Caio Vitor Carneiro de Oliveira**
 
 Curso: Residência Tecnológica em Sistemas Embarcados
 
 Instituição: EmbarcaTech - HBr
 
-Campinas, ___ de 2025
+Brasília, 13 de junho de 2025
 
 ---
+LED RGB alterna entre vermelho, verde e azul ciclicamente.
 
-<!-- INSIRA O CONTEÚDO DO SEU README AQUI! -->
+Buzzer emite bipes periodicamente.
+
+Botão A (GPIO 5): pausa/retoma a tarefa do LED.
+
+Botão B (GPIO 6): pausa/retoma a tarefa do buzzer.
 
 ---
 
